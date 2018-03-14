@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN" "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+<web-app id="WebApp_ID">
+	<display-name>sandbox_JMX_WebMonitor</display-name>
+	<servlet>
+		<servlet-name>HelloWorld</servlet-name>
+		<display-name>HelloWorld</display-name>
+		<description></description>
+		<jsp-file>/HelloWorld.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>RegisterMonitor</servlet-name>
+		<display-name>RegisterMonitor</display-name>
+		<description>JMX_Monitor</description>
+		<servlet-class>jav.Servlet.RegisterMonitor</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HelloWorld</servlet-name>
+		<url-pattern>/HelloWorld</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RegisterMonitor</servlet-name>
+		<url-pattern>/RegisterMonitor</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
