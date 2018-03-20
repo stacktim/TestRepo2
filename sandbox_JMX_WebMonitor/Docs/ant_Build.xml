@@ -45,7 +45,7 @@
 
 	<target name="deploy" depends="build" >
 	  <echo>=== DEPLOY ===</echo>
-		 <scp file="${dir.buildfile}/${file_warName}" todir="${dir.deploy}" password=""/>		                
+		 <cp file="c:\temp\Build.war" todir="C:\Temp\Jenkins\apache-tomcat-8.5.29\webapps" password=""/>		                
     </target>
 	
 	<target name="all" depends="deploy" >
