@@ -32,7 +32,7 @@
 
 	<target name="compile"  depends="prepare" >
 	  <echo>=== Compile ===</echo>
-        <javac srcdir="sandbox_JMX_WebMonitor/src" destdir="temp/classes"  classpathref="classpath"/>
+        <javac srcdir="../src" destdir="temp/classes"  classpathref="classpath"/>
     </target>
 
 	 <target name="build" depends="compile" >
