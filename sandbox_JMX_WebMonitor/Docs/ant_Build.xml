@@ -26,8 +26,8 @@
 	
 	<target name="prepare" depends="clean">
 	  <echo>=== PREPARE ===</echo>
-	  <mkdir dir="${dir.build.BasePath}" />
-	  <mkdir dir="${dir.build.BasePath}/classes" />
+	  <mkdir dir="temp" />
+	  <mkdir dir="temp/classes" />
 	</target>
 
 	<target name="compile"  depends="prepare" >
