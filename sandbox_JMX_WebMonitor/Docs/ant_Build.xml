@@ -36,7 +36,7 @@
 
 	 <target name="build" depends="compile" >
 	  <echo>=== BUILD ===</echo>
-		 <war destfile="c:\temp\Build.war" >
+		 <war destfile="${dir.build.BasePath}\${file.warName}" >
 		  <fileset dir="../WebContent"/>
 		  <classes dir="${dir.build.BasePath}/classes"/>
 		</war>
@@ -46,7 +46,7 @@
 		<echo>=== DEPLOY ===</echo>
 		<!-- <cp file="c:\temp\Build.war" todir="C:\Temp\Jenkins\apache-tomcat-8.5.29\webapps" password=""/>		                
 		-->
-		<copy file="c:\temp\Build.war" todir="C:\Temp\Jenkins\apache-tomcat-8.5.29\webapps" />		                
+		<copy file="${dir.build.BasePath}\${file.warName}" todir="C:\Temp\Jenkins\apache-tomcat-8.5.29\webapps" />		                
 		
 	</target>
 	
