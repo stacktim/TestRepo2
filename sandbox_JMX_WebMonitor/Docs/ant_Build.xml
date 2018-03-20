@@ -37,9 +37,9 @@
 
 	 <target name="build" depends="compile" >
 	  <echo>=== BUILD ===</echo>
-		 <war destfile="${dir.build.BasePath}/${file.warName}" >
-		  <fileset dir="${dir.src.workspace}/${dir.project}/WebContent"/>
-		  <classes dir="${dir.build.BasePath}/classes"/>
+		 <war destfile="c:\temp\Build.war" >
+		  <fileset dir="../WebContent"/>
+		  <classes dir="temp/classes"/>
 		</war>
 	  </target>
 
