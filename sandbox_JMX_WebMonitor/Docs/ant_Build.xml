@@ -54,4 +54,10 @@
 	<target name="all" depends="deploy" >
 	</target>
 
+	
+	<target name="test_v" depends="" >
+		<echo>=== ${file.warName} ===</echo>
+	</target>
+
+	
 </project>
