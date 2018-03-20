@@ -13,7 +13,7 @@
      
    
     <path id="classpath">
-        <fileset dir="/opt/eclipse/configuration/org.eclipse.osgi/993/0/.cp/lib/j2ee-1.4/" includes="**/*.jar"/>
+        <fileset dir="c:\temp\libs\" includes="**/*.jar"/>
     </path>
 
 	<target name="clean">
