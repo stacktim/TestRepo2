@@ -5,8 +5,8 @@
 	<property name="file.warName" value="JMX_WebMonitor.war"/>
 	<property name="dir.deploy" value="xx@xx.tt.com:performance/lib"/>
 	
-	<property name="dir.build.BasePath" value="/home/jvalenc/Desktop/build"/>
-    <property name="dir.src.workspace" value="/home/jvalenc/eclipse_workspace/default_workspace_2017Xcel"/>
+<!--  	<property name="dir.build.BasePath" value="/home/jvalenc/Desktop/build"/>
+    <property name="dir.src.workspace" value="/home/jvalenc/eclipse_workspace/default_workspace_2017Xcel"/>  -->
 
 	<!-- ##   SRC DIRECOTRY PATHS   -->
     <property name="dir.project" value="sandbox_JMX_WebMonitor"/>
