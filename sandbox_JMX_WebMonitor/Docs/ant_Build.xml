@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="all" name="JMX_WebMonitor">
+	<tstamp/>
+   	
+	<property name="file.warName" value="JMX_WebMonitor.war"/>
+	<property name="dir.deploy" value="xx@xx.tt.com:performance/lib"/>
+	
+	<property name="dir.build.BasePath" value="/home/jvalenc/Desktop/build"/>
+    <property name="dir.src.workspace" value="/home/jvalenc/eclipse_workspace/default_workspace_2017Xcel"/>
+
+	<!-- ##   SRC DIRECOTRY PATHS   -->
+    <property name="dir.project" value="sandbox_JMX_WebMonitor"/>
+     
+   
+    <path id="classpath">
+        <fileset dir="/opt/eclipse/configuration/org.eclipse.osgi/993/0/.cp/lib/j2ee-1.4/" includes="**/*.jar"/>
+    </path>
+
+	<target name="clean">
+	  <echo>=== CLEAN ===</echo>
+	  <delete failonerror="false">
+	    <fileset dir="${dir.build.BasePath}" includes="**/*"/>
+	  </delete>
+	  <delete dir="${dir.build.BasePath}" />
+	</target>
+	
+	<target name="prepare" depends="clean">
+	  <echo>=== PREPARE ===</echo>
+	  <mkdir dir="${dir.build.BasePath}" />
+	  <mkdir dir="${dir.build.BasePath}/classes" />
+	</target>
+
+	<target name="compile"  depends="prepare" >
+	  <echo>=== Compile ===</echo>
+        <javac srcdir="${dir.src.workspace}/${dir.project}/src" destdir="${dir.build.BasePath}/classes"  classpathref="classpath"/>
+    </target>
+
+	 <target name="build" depends="compile" >
+	  <echo>=== BUILD ===</echo>
+		 <war destfile="${dir.build.BasePath}/${file.warName}" >
+		  <fileset dir="${dir.src.workspace}/${dir.project}/WebContent"/>
+		  <classes dir="${dir.build.BasePath}/classes"/>
+		</war>
+	  </target>
+
+	<target name="deploy" depends="build" >
+	  <echo>=== DEPLOY ===</echo>
+		 <scp file="${dir.buildfile}/${file_warName}" todir="${dir.deploy}" password=""/>		                
+    </target>
+	
+	<target name="all" depends="deploy" >
+	</target>
+
+</project>
