@@ -44,9 +44,12 @@
 	  </target>
 
 	<target name="deploy" depends="build" >
-	  <echo>=== DEPLOY ===</echo>
-		 <cp file="c:\temp\Build.war" todir="C:\Temp\Jenkins\apache-tomcat-8.5.29\webapps" password=""/>		                
-    </target>
+		<echo>=== DEPLOY ===</echo>
+		<!-- <cp file="c:\temp\Build.war" todir="C:\Temp\Jenkins\apache-tomcat-8.5.29\webapps" password=""/>		                
+		-->
+		<copy file="c:\temp\Build.war" todir="C:\Temp\Jenkins\apache-tomcat-8.5.29\webapps" />		                
+		
+	</target>
 	
 	<target name="all" depends="deploy" >
 	</target>
