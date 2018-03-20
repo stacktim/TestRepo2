@@ -5,11 +5,10 @@
 	<property name="file.warName" value="JMX_WebMonitor.war"/>
 	<property name="dir.deploy" value="xx@xx.tt.com:performance/lib"/>
 	
-<!--  	<property name="dir.build.BasePath" value="/home/jvalenc/Desktop/build"/>
-    <property name="dir.src.workspace" value="/home/jvalenc/eclipse_workspace/default_workspace_2017Xcel"/>  -->
-
+	<property name="dir.build.BasePath" value="c:\temp\build"/>
+	<property name="dir.src.workspace" value="/home/jvalenc/eclipse_workspace/default_workspace_2017Xcel"/>
 	<!-- ##   SRC DIRECOTRY PATHS   -->
-    <property name="dir.project" value="sandbox_JMX_WebMonitor"/>
+	<property name="dir.project" value="sandbox_JMX_WebMonitor"/>
      
    
     <path id="classpath">
@@ -26,20 +25,20 @@
 	
 	<target name="prepare" depends="clean">
 	  <echo>=== PREPARE ===</echo>
-	  <mkdir dir="temp" />
-	  <mkdir dir="temp/classes" />
+	  <mkdir dir="${dir.build.BasePath}" />
+	  <mkdir dir="${dir.build.BasePath}/classes" />
 	</target>
 
 	<target name="compile"  depends="prepare" >
 	  <echo>=== Compile ===</echo>
-        <javac srcdir="../src" destdir="temp/classes"  classpathref="classpath"/>
+        <javac srcdir="../src" destdir="${dir.build.BasePath}/classes"  classpathref="classpath"/>
     </target>
 
 	 <target name="build" depends="compile" >
 	  <echo>=== BUILD ===</echo>
 		 <war destfile="c:\temp\Build.war" >
 		  <fileset dir="../WebContent"/>
-		  <classes dir="temp/classes"/>
+		  <classes dir="${dir.build.BasePath}/classes"/>
 		</war>
 	  </target>
 
