@@ -46,7 +46,7 @@
 		<echo>=== DEPLOY ===</echo>
 		<!-- <cp file="c:\temp\Build.war" todir="C:\Temp\Jenkins\apache-tomcat-8.5.29\webapps" password=""/>		                
 		-->
-		<echo>Z:\</echo>
+		<echo>${dir.build.BasePath}\${file.warName} Z:\</echo>
 		
 		<copy file="${dir.build.BasePath}\${file.warName}" todir="Z:\" />		                
 		
